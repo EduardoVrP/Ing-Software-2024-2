@@ -68,7 +68,6 @@ while(not(sets1 == meta or sets2 == meta)):
     while(ganador_juegos is None):
         puntos1 = puntos2 = 0
         ganador_puntos = None
-        bandera = False
         print("\nJuego #" + str(juegos_jugados))
         if(juegos_jugados % 2 == 0):
             print("\nSaca el Jugador 1 (" + str(jugador1) + ")")
