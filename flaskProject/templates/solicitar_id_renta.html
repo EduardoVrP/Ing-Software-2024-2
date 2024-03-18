@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solicitar ID de Renta</title>
+</head>
+<body>
+    <h2>Solicitar ID de Renta</h2>
+    <form action="{{ url_for('rentar.actualizar_renta') }}" method="post">
+        <label for="rentar_id">ID de Renta:</label>
+        <input type="number" id="rentar_id" name="rentar_id" required>
+        <button type="submit">Buscar Renta</button>
+    </form>
+</body>
+</html>

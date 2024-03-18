@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ver Rentas</title>
+    <style>
+        .vencido {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h2>Lista de Rentas</h2>
+    <table>
+        <tr>
+            <th>ID de Renta</th>
+            <th>ID de Usuario</th>
+            <th>ID de Película</th>
+            <th>Fecha de Renta</th>
+            <th>Días de Renta</th>
+            <th>Estatus</th>
+        </tr>
+        {% for renta in rentas %}
+            <tr {% if renta in rentas_vencidas %}class="vencido"{% endif %}>
+                <td>{{ renta.idRentar }}</td>
+                <td>{{ renta.idUsuario }}</td>
+                <td>{{ renta.idPelicula }}</td>
+                <td>{{ renta.fecha_renta }}</td>
+                <td>{{ renta.dias_de_renta }}</td>
+                <td>{{ renta.estatus }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+    <a href="/rentar">Regresar al Menú Rentar</a>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actualizar Pelicula</title>
+</head>
+<body>
+    <h2>Actualizar Pelicula</h2>
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <ul class="flash-messages">
+                {% for message in messages %}
+                    <li>{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    {% endwith %}
+    <form action="{{ url_for('pelicula.actualizar_datos_pelicula') }}" method="post">
+        <input type="hidden" name="pelicula_id" value="{{ pelicula_id }}">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" value="{{ pelicula.nombre }}" required><br>
+        <label for="genero">Genero:</label>
+        <input type="text" id="genero" name="genero" value="{{ pelicula.genero }}" required><br>
+        <label for="duracion">Duracion:</label>
+        <input type="number" id="duracion" name="duracion" value="{{ pelicula.duracion }}"><br>
+        <label for="inventario">Inventario:</label>
+        <input type="number" id="inventario" name="inventario" value="{{ pelicula.inventario }}"><br>
+        <button type="submit">Actualizar Pelicula</button>
+    </form>
+
+    <form action="{{ url_for('pelicula.borrar_pelicula') }}" method="post">
+        <input type="hidden" name="pelicula_id" value="{{ pelicula_id }}">
+        <button type="submit" onclick="return confirm('¿Estás seguro de que deseas borrar esta pelicula?')">Borrar Pelicula</button>
+    </form>
+</body>
+</html>

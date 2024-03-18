@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Agregar Nueva Pelicula</title>
+</head>
+<body>
+    <h2>Agregar Nueva Pelicula</h2>
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <ul class="flash-messages">
+                {% for message in messages %}
+                    <li>{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    {% endwith %}
+    <form action="/pelicula/agregar" method="post">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+        <br>
+        <label for="genero">Genero:</label>
+        <input type="text" id="genero" name="genero">
+        <br>
+        <label for="duracion">Duracion (minutos):</label>
+        <input type="number" id="duracion" name="duracion" required>
+        <br>
+        <label for="inventario">Inventario:</label>
+        <input type="number" id="inventario" name="inventario" required>
+        <br>
+        <input type="submit" value="Agregar Pelicula">
+    </form>
+    <a href="/pelicula">Regresar al Menu Pelicula</a>
+</body>
+</html>

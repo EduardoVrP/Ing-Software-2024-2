@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tabla de todos los usuarios</title>
+</head>
+<body>
+<h2> Peliculas en la base de datos </h2>
+    <table>
+        <thead>
+            <tr>
+                <th> ID </th>
+                <th> Nombre </th>
+                <th> Genero </th>
+                <th> Duracion </th>
+                <th> Inventario </th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for p in peliculas %}
+                <tr>
+                    <td> {{ p.idPelicula }}</td>
+                    <td> {{ p.nombre }}</td>
+                    <td> {{ p.genero }}</td>
+                    <td> {{ p.duracion }}</td>
+                    <td> {{ p.inventario }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <a href="/pelicula">Regresar al Menu Pelicula</a>
+</body>
+</html>

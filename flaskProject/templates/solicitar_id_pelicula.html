@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solicitar ID de Pelicula</title>
+</head>
+<body>
+    <h2>Solicitar ID de Pelicula</h2>
+    <form action="{{ url_for('pelicula.actualizar_pelicula') }}" method="post">
+        <label for="pelicula_id">ID de Pelicula:</label>
+        <input type="number" id="pelicula_id" name="pelicula_id" required>
+        <button type="submit">Buscar Pelicula</button>
+    </form>
+</body>
+</html>

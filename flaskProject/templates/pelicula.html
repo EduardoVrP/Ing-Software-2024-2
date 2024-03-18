@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Menu Pelicula</title>
+</head>
+<body>
+    <h2> Menu Pelicula</h2>
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <ul class="flash-messages">
+                {% for message in messages %}
+                    <li>{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    {% endwith %}
+    <a href='/pelicula/ver_peliculas'> Ver todos los peliculas </a>
+    <br>
+    <a href='/pelicula/agregar'> Agregar pelicula </a>
+    <br>
+    <a href='/pelicula/solicitar_id_pelicula'> Actualizar pelicula </a>
+    <br>
+    <a href='/' > Regresar al menu inicial </a>
+</body>
+</html>

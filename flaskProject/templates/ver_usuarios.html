@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tabla de todos los usuarios</title>
+</head>
+<body>
+<h2> Usuarios en la base de datos </h2>
+    <table>
+        <thead>
+            <tr>
+                <th> ID </th>
+                <th> Nombre </th>
+                <th> Apellido paterno </th>
+                <th> Apellido materno </th>
+                <th> Correo </th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for u in usuarios %}
+                <tr>
+                    <td> {{ u.idUsuario }}</td>
+                    <td> {{ u.nombre }}</td>
+                    <td> {{ u.apMat }}</td>
+                    <td> {{ u.apMat  if u.apMat != None else '*'}}</td>
+                    <td> {{ u.email  if u.email != None else '*'}}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <a href="/usuario">Regresar al Menú Usuario</a>
+</body>
+</html>
