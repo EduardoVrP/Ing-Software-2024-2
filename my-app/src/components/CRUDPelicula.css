@@ -1,0 +1,25 @@
+.crud-pelicula-container {
+    margin-top: 20px;
+  }
+  
+  .peliculas-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+  }
+  
+  .pelicula-item {
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  .pelicula-buttons {
+    margin-top: 10px;
+  }
+  
+  .pelicula-buttons button {
+    margin-right: 10px;
+    cursor: pointer;
+  }
+  

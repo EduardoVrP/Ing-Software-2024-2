@@ -1,0 +1,22 @@
+.crud-usuario-container {
+    margin: 20px;
+  }
+  
+  .usuarios-list {
+    margin-top: 20px;
+  }
+  
+  .usuario-item {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .usuario-item p {
+    margin: 0;
+  }
+  
+  .usuario-item button {
+    margin-left: 5px;
+  }
+  

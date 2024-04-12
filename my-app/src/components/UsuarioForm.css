@@ -1,0 +1,26 @@
+.usuario-form-container {
+    margin-bottom: 20px;
+  }
+  
+  .usuario-form-container h2 {
+    margin-bottom: 10px;
+  }
+  
+  .usuario-form-container form {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+  }
+  
+  .usuario-form-container input {
+    margin-bottom: 10px;
+  }
+  
+  .usuario-form-container label {
+    margin-bottom: 10px;
+  }
+  
+  .usuario-form-container button {
+    margin-top: 10px;
+  }
+  

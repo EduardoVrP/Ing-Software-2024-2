@@ -1,0 +1,50 @@
+.pelicula-form-container {
+    margin-bottom: 20px;
+  }
+  
+  .pelicula-form-container h2 {
+    margin-bottom: 10px;
+  }
+  
+  .pelicula-form-container form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .pelicula-form-container input {
+    margin-bottom: 10px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .pelicula-form-container input[type="number"] {
+    width: 150px;
+  }
+  
+  .pelicula-form-container input[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 5px;
+  }
+  
+  .pelicula-form-container input[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+  
+  .pelicula-form-container button[type="button"] {
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 5px;
+  }
+  
+  .pelicula-form-container button[type="button"]:hover {
+    background-color: #c82333;
+  }
+  
